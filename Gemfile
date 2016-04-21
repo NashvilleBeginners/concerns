@@ -12,15 +12,6 @@ gem 'modernizr-rails'
 gem 'normalize-rails'
 gem 'coffee-rails', '~> 4.1.0'
 
-group :development, :test do
-  gem 'byebug'
-  gem 'pry-rails'
-  gem 'pry-nav'
-  gem 'awesome_print'
-  gem 'quiet_assets'
-  gem 'rspec-rails'
-end
-
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
@@ -35,9 +26,18 @@ end
 group :test do
   gem 'spork-rails'
   gem 'database_cleaner'
-  gem 'shoulda-matchers'
+  gem 'shoulda-matchers', require: false
   gem 'capybara-webkit'
   gem 'launchy'
   gem 'fuubar'
   gem 'simplecov'
+end
+
+group :development, :test do
+  gem 'byebug'
+  gem 'pry-rails'
+  gem 'pry-nav'
+  gem 'awesome_print'
+  gem 'quiet_assets'
+  gem 'rspec-rails'
 end
