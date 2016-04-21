@@ -29,6 +29,7 @@ group :development do
   gem 'guard-rspec'
   gem 'guard-spork'
   gem 'rb-fsevent', require: false
+  gem 'faker'
 end
 
 group :test do
