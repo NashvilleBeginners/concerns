@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
 
   # GET /products
   def index
-    @products = Product.all
+    @products = Product.search(params[:query])
   end
 
   # GET /products/1

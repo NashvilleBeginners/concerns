@@ -29,3 +29,9 @@
 <br>
 
 <%= link_to 'New Product', new_product_path %>
+
+<%= form_tag products_url, method: :get do %>
+  <%= text_field_tag :query, params[:query] %>
+  <%= submit_tag 'Search' %>
+  <%= link_to "clear", products_path %>
+<% end %>

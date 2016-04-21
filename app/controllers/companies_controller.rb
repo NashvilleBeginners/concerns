@@ -3,7 +3,7 @@ class CompaniesController < ApplicationController
 
   # GET /companies
   def index
-    @companies = Company.all
+    @companies = Company.activated
   end
 
   # GET /companies/1
@@ -55,4 +55,5 @@ class CompaniesController < ApplicationController
     def company_params
       params.require(:company).permit(:name, :activated)
     end
+
 end
