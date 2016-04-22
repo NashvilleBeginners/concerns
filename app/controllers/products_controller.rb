@@ -1,9 +1,10 @@
 class ProductsController < ApplicationController
+  include Loggable
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   # GET /products
   def index
-    @products = Product.search(params[:query])
+    @products = Product.activated.search(params[:query])
   end
 
   # GET /products/1

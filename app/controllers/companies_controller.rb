@@ -1,9 +1,10 @@
 class CompaniesController < ApplicationController
+  include Loggable
   before_action :set_company, only: [:show, :edit, :update, :destroy]
 
   # GET /companies
   def index
-    @companies = Company.activated
+    @companies = Company.activated.search(params[:query])
   end
 
   # GET /companies/1

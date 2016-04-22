@@ -1,8 +1,10 @@
 class Company < ActiveRecord::Base
+  include Activatable
+  include Searchable
+
   has_many :products
 
   validates :name,
-            :activated,
             presence: true
 
   def to_s
